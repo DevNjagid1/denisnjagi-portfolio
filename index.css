@@ -1,0 +1,198 @@
+:root {
+    --bg-dark: #05070a;
+    --gold: #d4af37;
+    --gold-glow: linear-gradient(45deg, #d4af37, #f1d279, #8a6d1d);
+    --gold-dim: rgba(212, 175, 55, 0.15);
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+    --nav-bg: rgba(5, 7, 10, 0.95);
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--gold-dim);
+    transition: var(--transition);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at 80% 20%, #111625 0%, var(--bg-dark) 100%);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-name {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.hero-title {
+    font-size: 1.3rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    min-height: 1.5em;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn {
+    padding: 15px 35px;
+    background: var(--gold-glow);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.primary-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.secondary-btn {
+    padding: 15px 35px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.secondary-btn:hover {
+    background: var(--gold-dim);
+}
+
+/* Circular Profile Image Fix */
+.profile-card {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1/1; 
+    background: #0f121d;
+    border-radius: 50%; 
+    padding: 8px;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: -3px; left: -3px; right: -3px; bottom: -3px;
+    background: var(--gold-glow);
+    border-radius: 50%; 
+    z-index: -1;
+    animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { filter: blur(6px); opacity: 0.8; }
+    50% { filter: blur(12px); opacity: 1; }
+    100% { filter: blur(6px); opacity: 0.8; }
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 2px solid var(--bg-dark);
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .hero-btns { justify-content: center; }
+    .hero-description { margin: 0 auto 40px; }
+    .hero-right { order: -1; display: flex; justify-content: center; margin-bottom: 30px; }
+    .nav-links { display: none; }
+    .profile-card { max-width: 280px; }
+}

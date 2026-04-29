@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Denis Njagi</title>
+    <link rel="stylesheet" href="portofolio.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">DENIS<span>NJAGI</span></div>
+
+<div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="portofolio.html" class="active">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section id="portfolio" class="portfolio-section">
+    <h2 class="section-title center">My Design Projects</h2>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="logo">Logos</button>
+        <button class="filter-btn" data-filter="poster">Posters</button>
+        <button class="filter-btn" data-filter="flyer">Flyers</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-card glow" data-category="logo">
+            <div class="card-image">
+                <img src="InkLet studios copy.jpg" alt="Logo Design">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Corporate Identity</h3>
+                <p>Modern minimalist logo for tech solutions.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card glow" data-category="poster">
+            <div class="card-image">
+                <img src="InkLet.jpg" alt="Poster Design">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Event Promotion</h3>
+                <p>Creative poster for community engagement.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card glow" data-category="flyer">
+            <div class="card-image">
+                <img src="ROTD LOGO.jpg" alt="Flyer Design">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Business Flyer</h3>
+                <p>Professional marketing material for local brands.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card glow" data-category="branding">
+            <div class="card-image">
+                <img src="edit.jpg" alt="Brand Identity">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Brand Guidelines</h3>
+                <p>Complete visual identity and color palettes.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card glow" data-category="poster">
+            <div class="card-image">
+                <img src="tash.jpg" alt="Event Poster">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Impact Poster</h3>
+                <p>Designing for social and community awareness.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card glow" data-category="logo">
+            <div class="card-image">
+                <img src="food.jpg" alt="Business Logo">
+                <div class="overlay"><span>View Project</span></div>
+            </div>
+            <div class="project-info">
+                <h3>Luxury Branding</h3>
+                <p>Elegant logo design for premium services.</p>
+            </div>
+        </div>
+    
+
+  <div class="portfolio-card glow" data-category="branding">
+    <div class="card-image">
+        <img src="bs card front.jpg" alt="Project Design">
+        <div class="overlay"><span>View Project</span></div>
+    </div>
+    <div class="project-info">
+        <h3>Creative Identity</h3>
+        <p>Comprehensive brand design for modern startups.</p>
+    </div>
+</div>
+</div>
+
+    <div class="modal" id="projectModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-img" src="">
+    </div>
+</section>
+
+<div id="portfolioModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-img" id="expandedImg" alt="Project Preview">
+</div>
+
+<script src="portfolio.js"></script>
+<script src="global.js"></script>
+</body>
+</html>
