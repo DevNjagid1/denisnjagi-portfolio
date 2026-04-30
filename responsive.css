@@ -24,34 +24,48 @@
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .navbar {
         display: flex !important;
-        justify-content: space-between !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
         align-items: center !important;
-        padding: 0 20px !important;
-        height: 70px !important;
+        gap: 12px;
+        padding: 0 15px !important;
+        height: 50px !important;
         position: fixed;
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 9999;
+        z-index: 10000;
         background: #05070a;
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .logo {
+        font-size: 1rem !important;
+        margin: 0 !important;
+        white-space: nowrap;
+        order: 2;
     }
 
     .menu-toggle {
         display: flex !important;
         flex-direction: column;
         justify-content: space-between;
-        width: 30px;
-        height: 21px;
+        width: 22px;
+        height: 16px;
         cursor: pointer;
-        z-index: 10000 !important;
+        z-index: 10001;
+        order: 1;
     }
 
     .menu-toggle .bar {
         width: 100% !important;
-        height: 3px !important;
+        height: 2px !important;
         background-color: #d4af37 !important;
         display: block !important;
         border-radius: 2px;
@@ -62,26 +76,27 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 70px;
-        left: -100%; 
-        width: 40%; 
-        height: calc(100vh - 70px);
+        top: 50px;
+        left: -100%;
+        width: 40%;
+        max-width: 180px;
+        height: calc(100vh - 50px);
         background: rgba(5, 7, 10, 0.98);
         backdrop-filter: blur(15px);
-        padding: 40px 0;
+        padding: 20px 0;
         text-align: left;
-        z-index: 9998;
+        z-index: 9999;
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border-right: 1px solid rgba(212, 175, 55, 0.2);
     }
 
     .nav-links.active {
-        left: 0; 
+        left: 0;
     }
 
     .nav-links a {
-        font-size: 1rem;
-        padding: 15px 25px;
+        font-size: 0.9rem;
+        padding: 12px 20px;
         display: block;
         color: #ffffff;
         text-decoration: none;
@@ -96,7 +111,7 @@
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 80px;
     }
 
     .hero-left, .hero-right {
@@ -126,10 +141,6 @@
 }
 
 @media (max-width: 480px) {
-    .nav-links {
-        width: 60%; 
-    }
-
     .section-title.center {
         font-size: 1.8rem;
     }
