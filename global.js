@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
-            
             const bars = menuToggle.querySelectorAll('.bar');
             bars.forEach(bar => bar.classList.toggle('active'));
         });
@@ -17,12 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                const bars = menuToggle.querySelectorAll('.bar');
+                bars.forEach(bar => bar.classList.remove('active'));
             });
         });
 
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
                 navLinks.classList.remove('active');
+                const bars = menuToggle.querySelectorAll('.bar');
+                bars.forEach(bar => bar.classList.remove('active'));
             }
         });
     }

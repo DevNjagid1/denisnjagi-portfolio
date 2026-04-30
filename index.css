@@ -1,7 +1,7 @@
 :root {
     --bg-dark: #05070a;
     --gold: #d4af37;
-    --gold-glow: linear-gradient(45deg, #d4af37, #f1d279, #8a6d1d);
+    --gold-glow: linear-gradient(45deg, #d4af37, #f1d279, #8a6d1d, #f1d279, #d4af37);
     --gold-dim: rgba(212, 175, 55, 0.15);
     --text-white: #ffffff;
     --text-gray: #a0a0a0;
@@ -42,16 +42,9 @@ body {
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
-}
-
-.logo {
     display: flex;
     align-items: center;
-    gap: 10px; 
-}
-
-.logo span {
-    color: var(--gold);
+    gap: 10px;
 }
 
 .logo span {
@@ -147,41 +140,52 @@ body {
     background: var(--gold-dim);
 }
 
-/* Circular Profile Image Fix */
 .profile-card {
     position: relative;
     width: 100%;
     max-width: 350px;
     aspect-ratio: 1/1; 
-    background: #0f121d;
+    background: var(--bg-dark);
     border-radius: 50%; 
-    padding: 8px;
-    z-index: 1;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .profile-card::before {
     content: '';
     position: absolute;
-    top: -3px; left: -3px; right: -3px; bottom: -3px;
-    background: var(--gold-glow);
-    border-radius: 50%; 
-    z-index: -1;
-    animation: borderRotate 4s linear infinite;
+    width: 160%;
+    height: 160%;
+    background: conic-gradient(transparent, transparent, transparent, #ffffff, #007bff, #28a745);
+    animation: rotate 3s linear infinite;
 }
 
-@keyframes borderRotate {
-    0% { filter: blur(6px); opacity: 0.8; }
-    50% { filter: blur(12px); opacity: 1; }
-    100% { filter: blur(6px); opacity: 0.8; }
+.profile-card::after {
+    content: '';
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    background: conic-gradient(transparent, transparent, transparent, #ffffff, #007bff, #28a745);
+    animation: rotate 3s linear infinite;
+    animation-delay: -1.5s;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .profile-img {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
     object-fit: cover;
     border-radius: 50%; 
-    border: 2px solid var(--bg-dark);
+    z-index: 2;
+    background: var(--bg-dark);
+    border: 3px solid var(--bg-dark);
 }
 
 @media (max-width: 992px) {

@@ -33,9 +33,9 @@
         flex-direction: row !important;
         justify-content: flex-start !important;
         align-items: center !important;
-        gap: 12px;
+        gap: 20px; 
         padding: 0 15px !important;
-        height: 50px !important;
+        height: 45px !important;
         position: fixed;
         width: 100%;
         top: 0;
@@ -46,7 +46,7 @@
     }
 
     .logo {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
         margin: 0 !important;
         white-space: nowrap;
         order: 2;
@@ -56,8 +56,8 @@
         display: flex !important;
         flex-direction: column;
         justify-content: space-between;
-        width: 22px;
-        height: 16px;
+        width: 20px;
+        height: 14px;
         cursor: pointer;
         z-index: 10001;
         order: 1;
@@ -76,11 +76,11 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 50px;
+        top: 45px;
         left: -100%;
-        width: 40%;
-        max-width: 180px;
-        height: calc(100vh - 50px);
+        width: 30%; 
+        max-width: 140px; 
+        height: calc(100vh - 45px);
         background: rgba(5, 7, 10, 0.98);
         backdrop-filter: blur(15px);
         padding: 20px 0;
@@ -95,8 +95,8 @@
     }
 
     .nav-links a {
-        font-size: 0.9rem;
-        padding: 12px 20px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
         display: block;
         color: #ffffff;
         text-decoration: none;
@@ -111,7 +111,7 @@
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 100px !important;
     }
 
     .hero-left, .hero-right {
@@ -120,8 +120,8 @@
 
     .profile-card {
         margin: 0 auto 30px;
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
 
     .hero-btns {
@@ -142,11 +142,11 @@
 
 @media (max-width: 480px) {
     .section-title.center {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero-name {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .modal-img {
