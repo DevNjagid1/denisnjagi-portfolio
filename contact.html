@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="contact.css">
 <link rel="stylesheet" href="responsive.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<title>Contact</title>
 </head>
 
 <body>
-    <nav class="navbar">
+
+<nav class="navbar">
     <div class="logo">DENIS<span>NJAGI</span></div>
 
-<div class="menu-toggle" id="mobile-menu">
+    <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -30,24 +35,54 @@
 </nav>
 
 <section id="contact" class="contact-section">
+
     <h2 class="section-title center">Contact Me</h2>
+
     <div class="contact-container">
+
         <div class="contact-info">
             <h3>Let's Work Together</h3>
-            <p>Email: <a href="mailto:denismwenda763@gmail.com" class="contact-link">denismwenda763@gmail.com</a></p>
-            <p>Phone: <a href="tel:+254768436165" class="contact-link">+254 768 436 165</a></p>
-            <p>Location: Nairobi, Kenya</p>
 
-            <a href="cv.pdf" download class="primary-btn">Download CV</a>
+            <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:denismwenda763@gmail.com" class="contact-link">Email Me</a>
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254768436165" class="contact-link">Call Me</a>
+            </p>
+
+            <p>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/254768436165" target="_blank" class="contact-link">WhatsApp</a>
+            </p>
+
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Nairobi, Kenya
+            </p>
+
+            <p>
+                <i class="fab fa-tiktok"></i>
+                <a href="https://www.tiktok.com/@inklet_studios?_r=1&_t=ZS-95szh9JJFw8" target="_blank" class="contact-link">TikTok</a>
+            </p>
+
+            <a href="DENIS NJAGI CARRICULUM VITAE(CV).pdf" download class="primary-btn">Download CV</a>
         </div>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" id="contactForm">
+
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
             <button type="submit" class="primary-btn">Send Message</button>
+
         </form>
+
     </div>
+
     <footer class="footer">
         <p>© 2026 Njagi Denis Mwenda Portfolio</p>
     </footer>

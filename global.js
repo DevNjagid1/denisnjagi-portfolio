@@ -53,3 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function loadPage(page) {
+    fetch(page)
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, "text/html");
+
+            const newContent = doc.querySelector("body").innerHTML;
+
+            document.getElementById("page-content").innerHTML = newContent;
+
+            window.scrollTo(0, 0);
+        });
+}
