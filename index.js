@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingSpan = document.getElementById('typing-text');
 
     const roles = [
-        "Information Scientist",
         "Community Developer",
+        "Information Scientist",
         "Digital Designer",
-        "Data Specialist"
-        "Guitarist & sound engineer"
+        "Data Specialist",
+        "Guitarist & sound engineer",
     ];
 
-    
+
 
     let roleIndex = 0;
     let charIndex = 0;
