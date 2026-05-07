@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "Community Developer",
         "Digital Designer",
         "Data Specialist"
+        "Guitarist & sound engineer"
     ];
+
+    
 
     let roleIndex = 0;
     let charIndex = 0;
