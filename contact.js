@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
     const form = document.getElementById("contactForm");
 
-    // Smooth navbar scroll transition logic
+    
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
             navbar.style.padding = "15px 8%";
@@ -16,16 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Upgraded Contact Form handler (Background Email + WhatsApp Redirection)
+    
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // 1. Extract values from input fields
+        
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
 
-        // 2. Send the Email automatically in the background using Web3Forms
+        
         fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -47,17 +47,20 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error sending email background process:", error));
 
-        // 3. Format and trigger the direct WhatsApp communication link
+
+        
         const whatsappMessage = `Hello Denis, my name is ${name}.\nEmail: ${email}\n\nMessage: ${message}`;
         const whatsappURL = `https://wa.me/254768436165?text=${encodeURIComponent(whatsappMessage)}`;
 
-        // Open WhatsApp web or app seamlessly in a new tab
+
         window.open(whatsappURL, "_blank");
 
-        // 4. Clean up the form fields immediately
         form.reset();
+        alert("Message sent successfully via Email and WhatsApp.");
     });
 
 });
+
+
 
 
