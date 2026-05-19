@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Community Developer",
         "Information Scientist",
         "Digital Designer",
-        "Data Specialist",
+        "Data Specialist & Analyst",
         "Guitarist & sound engineer",
     ];
 
