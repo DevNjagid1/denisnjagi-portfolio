@@ -37,3 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // trial fix
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            access_key: "f4fe3916-0bd0-47d9-b812-4e98a5c9e581",
+            name: name,
+            email: email,
+            message: message,
+            subject: `Portfolio Contact from ${name}`
+        })
+    });
+
+    const whatsappMessage = `Hello Denis, my name is ${name}.\nMessage: ${message}`;
+    const whatsappURL = `https://wa.me/254768436165?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    window.open(whatsappURL, "_blank");
+
+    form.reset();
+    alert("Message sent via Email! Redirecting to WhatsApp...");
+});
+
+
+
