@@ -56,10 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(whatsappURL, "_blank");
 
         form.reset();
-        alert("Message sent successfully via Email and WhatsApp.");
+        alert("Message sent successfully via Email!, Thank you for reaching out.");
     });
 
 });
+
+
 
 
 
